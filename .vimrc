@@ -87,7 +87,22 @@ if $LANG[0]=='k' && $LANG[1]=='o'
 set fileencoding=korea
 endif
 
+"""""""""""""""""""""
+" YouCompleteMe
+"""""""""""""""""""""
 
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_key_list_select_completion = ['', '']
+let g:ycm_key_list_previous_completion = ['', '']
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_warning_symbol = '>*'
+
+nnoremap g :YcmCompleter GoTo
+" nnoremap gg :YcmCompleter GoToImprecise
+nnoremap d :YcmCompleter GoToDeclaration
+nnoremap t :YcmCompleter GetType
+nnoremap p :YcmCompleter GetParent 
 
 " 컬러 스킴 사용
 set termguicolors
